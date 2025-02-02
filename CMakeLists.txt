@@ -7,7 +7,7 @@ option(CHIBIHASH_CPP_TESTING "Enable test target for ${PROJECT_NAME}" ${PROJECT_
 
 add_library(${PROJECT_NAME} INTERFACE)
 add_library("chibihash::${PROJECT_NAME}" ALIAS ${PROJECT_NAME})
-target_sources(${PROJECT_NAME} PRIVATE FILE_SET HEADERS BASE_DIRS "include" FILES
+target_sources(${PROJECT_NAME} PUBLIC FILE_SET HEADERS BASE_DIRS "include" FILES
 	"include/chibihash/chibihash64.hh"
 )
 target_include_directories(${PROJECT_NAME} INTERFACE
